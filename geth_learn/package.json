@@ -1,0 +1,11 @@
+{
+  "name": "geth_learn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ganache": "ganache --wallet.seed myCustomSeed"
+  },
+  "author": "",
+  "license": "ISC"
+}
