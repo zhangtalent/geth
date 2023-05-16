@@ -143,3 +143,25 @@ truffle init
 
 truffle console
 ```
+
+### 部署合约
+
+```
+
+
+启动一个项目
+truffle init
+合约sol放入contracts文件夹
+编写迁移文件到migrations文件夹
+2_deploy_contacts.js
+var Storage = artifacts.require("./Storage.sol")
+module.exports = function (deployer) {
+  deployer.deploy(Storage)
+}
+将Storage发布ganache
+truffle migrate --network ganacheNet
+
+控制台测试
+truffle console --network ganacheNet 连接到指定ganache网络
+Storage.deployed().then(function(instance){return instance.get();})
+```
